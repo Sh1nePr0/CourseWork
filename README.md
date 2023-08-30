@@ -1,9 +1,12 @@
 # CourseWork
 Russian:
+
 Курсовая работа разделена на 3 различных задания.
 
 C++:
+
 ---1---
+
 В первом задании необходимо создать класс библиографических описаний книг CBookCard. Класс должен содержать поля: автор, заглавие, издательство, год издания, ББК, рейтинг, комментарий . 
   1.	Все поля должны быть закрытыми. Для всех их должны быть созданы методы доступа (или свойства). 
   2.	В конструкторе за исключением рейтинга и комментария должна осуществляться инициализация всех полей. 
@@ -13,8 +16,11 @@ C++:
   4.	Создать два объекта библиографических описаний книг. Вызвать для них метод, осуществляющий вывод строки библиографического описания.
   Можно использовать как реально существующие книги, так и чисто гипотетические.
   5.	Создать массив (размерностью не более 5) объектов библиографических описаний книг. Создать статический метод для упорядочивания (по году издания) данного массива.
+     
   Вывести на экран значения массива до сортировки и после сортировки.
+  
 ---2---
+
 Необходимо реализовать иерархию классов предметной области на языке C++.
   Требования и рекомендации:
   1.	Иерархия классов должна состоять не менее чем из 3-х уровней. 
@@ -24,8 +30,11 @@ C++:
   5.	Классы рекомендуется оформить в виде библиотеки классов. Проверку функциональности осуществить в консольном проекте.
   Моё задание:
   Магазин. Определить иерархию товаров магазина. Создать продовольственный магазин. Определить общую стоимость товаров магазина, стоимость товаров заданной категории.
+
 Python:
+
 ---3---
+
 Создать класс, соответствующий индивидуальному варианту задания. Создать коллекцию для хранения экземпляров созданного класса.
 Вид коллекции выбрать самостоятельно. Написать Windows-приложение для работы с этой коллекцией, которое позволит выполнять:
   1.	добавление элемента в коллекцию с клавиатуры;
@@ -46,10 +55,13 @@ Python:
   •	вывод на экран информации о человеке, чья фамилия введена с клавиатуры (если такого нет, вывести соответствующее сообщение).
 
 English:
+
 The course work is divided into 3 different tasks.
 
 C++:
+
 ---1---
+
 In the first task, you need to create a class of bibliographic descriptions of CBookCard books. The class must contain the following fields: author, title, publisher, year of publication, BBK, rating, comment .
   1. All fields must be closed. Access methods (or properties) must be created for all of them.
   2. In the constructor, with the exception of the rating and comment, all fields must be initialized.
@@ -59,8 +71,11 @@ In the first task, you need to create a class of bibliographic descriptions of C
   4. Create two objects of bibliographic descriptions of books. Call a method for them that outputs a string of bibliographic description.
   You can use both real-life books and purely hypothetical ones.
   5. Create an array (with a dimension of no more than 5) of objects of bibliographic descriptions of books. Create a static method for ordering (by year of publication) this array.
+     
   Display the array values before sorting and after sorting.
+
 ---2---
+
 It is necessary to implement a hierarchy of domain classes in C++.
   Requirements and recommendations:
   1. The hierarchy of classes should consist of at least 3 levels.
@@ -70,8 +85,11 @@ It is necessary to implement a hierarchy of domain classes in C++.
   5. Classes are recommended to be designed in the form of a class library. Check the functionality in the console project.
   My assignment:
   Shop. Define the hierarchy of the store's products. Create a grocery store. Determine the total cost of the store's goods, the cost of goods of a given category.
+
 Python:
+
 ---3---
+
 Create a class corresponding to an individual version of the task. Create a collection to store instances of the created class.
 Choose the type of collection yourself. Write a Windows application to work with this collection, which will allow you to:
   1. add an item to the collection from the keyboard;
