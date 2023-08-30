@@ -1,6 +1,6 @@
 #include "CBookCard.h"
 
-//Определение всех методов из класса CBookCard
+//РћРїСЂРµРґРµР»РµРЅРёРµ РІСЃРµС… РјРµС‚РѕРґРѕРІ РёР· РєР»Р°СЃСЃР° CBookCard
 CBookCard::CBookCard(string author, string title, string publisher, int yearOfPublication, string bbk)
 {
 	this->author = author;
@@ -67,8 +67,8 @@ string CBookCard::GetBBK()
 
 void CBookCard::SetRate(int rate)
 {
-	//Ограничение ввода рейтинга(не более 3 по заданию)
-	//Если вводится < 0 , то присваивается 0 ,а если > 3, то 3
+	//РћРіСЂР°РЅРёС‡РµРЅРёРµ РІРІРѕРґР° СЂРµР№С‚РёРЅРіР°(РЅРµ Р±РѕР»РµРµ 3 РїРѕ Р·Р°РґР°РЅРёСЋ)
+	//Р•СЃР»Рё РІРІРѕРґРёС‚СЃСЏ < 0 , С‚Рѕ РїСЂРёСЃРІР°РёРІР°РµС‚СЃСЏ 0 ,Р° РµСЃР»Рё > 3, С‚Рѕ 3
 	if (rate < 0)
 		this->rate = 0;
 	else if (rate > 3)
@@ -97,7 +97,7 @@ void CBookCard::ToString()
 {
 	cout<< " Author : " << author <<"\n" << " Title : " << title<<"\n"
 		<< " Publisher : " << publisher<<"\n"
-		<< " Year of publication : " << yearOfPublication<<"\n" << " ББК: " << bbk<<"\n"
+		<< " Year of publication : " << yearOfPublication<<"\n" << " Р‘Р‘Рљ: " << bbk<<"\n"
 		<< " Rate : " << rate <<endl;
 }
 
@@ -130,7 +130,7 @@ int CBookCard::CorrectInputYearOfPublication()
 	getline(cin, inputString);
 	while (inputString.empty())
 	{
-		cout << "Некорректный год публикации. Попробуйте еще раз..." << endl << "Введите год публикации : ";
+		cout << "РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РіРѕРґ РїСѓР±Р»РёРєР°С†РёРё. РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·..." << endl << "Р’РІРµРґРёС‚Рµ РіРѕРґ РїСѓР±Р»РёРєР°С†РёРё : ";
 		getline(cin, inputString);
 	}
 	for (char c : inputString)
@@ -142,17 +142,17 @@ int CBookCard::CorrectInputYearOfPublication()
 	}
 	if (buff.empty())
 	{
-		cout << "Некорректный год публикации. Попробуйте еще раз..." << endl << "Введите год публикации : ";
+		cout << "РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РіРѕРґ РїСѓР±Р»РёРєР°С†РёРё. РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·..." << endl << "Р’РІРµРґРёС‚Рµ РіРѕРґ РїСѓР±Р»РёРєР°С†РёРё : ";
 		year = CorrectInputYearOfPublication();
 	}
 	else if (buff.size() != inputString.size())
 	{
-		cout << "Некорректный год публикации. Попробуйте еще раз..." << endl << "Введите год публикации : ";
+		cout << "РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РіРѕРґ РїСѓР±Р»РёРєР°С†РёРё. РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·..." << endl << "Р’РІРµРґРёС‚Рµ РіРѕРґ РїСѓР±Р»РёРєР°С†РёРё : ";
 		year = CorrectInputYearOfPublication();
 	}
 	else
 	{
-		year = atoi(buff.c_str());//Преобразование строки с годом в тип int
+		year = atoi(buff.c_str());//РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ СЃС‚СЂРѕРєРё СЃ РіРѕРґРѕРј РІ С‚РёРї int
 	}
 	return year;
 }
@@ -172,7 +172,7 @@ string CBookCard::CorrectInputAuthor()
 			if (CheckOnSymbol(inputString) == false)
 			{
 				cin.clear();
-				cout << "Неправильный ввод автора!!! Попробуйте еще раз..." << endl << "Введите автора : ";
+				cout << "РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ РІРІРѕРґ Р°РІС‚РѕСЂР°!!! РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·..." << endl << "Р’РІРµРґРёС‚Рµ Р°РІС‚РѕСЂР° : ";
 				buffer = "";
 				getline(cin, inputString);
 				checking = true;
@@ -181,7 +181,7 @@ string CBookCard::CorrectInputAuthor()
 			if ((c >= '0' && c <= '9') || (c == ',') || (c == '/') || (c == ';') || (c == ':') || (c == '[') || (c == ']') || (c == '{') || (c == '}') || (c == '(') || (c == ')'))
 			{
 				cin.clear();
-				cout << "Неправильный ввод автора!!! Попробуйте еще раз..." << endl << "Введите автора : ";
+				cout << "РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ РІРІРѕРґ Р°РІС‚РѕСЂР°!!! РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·..." << endl << "Р’РІРµРґРёС‚Рµ Р°РІС‚РѕСЂР° : ";
 				buffer = "";
 				getline(cin, inputString);
 				checking = true;
@@ -196,7 +196,7 @@ string CBookCard::CorrectInputAuthor()
 		if (inputString.empty())
 		{
 			cin.clear();
-			cout << "Неправильный ввод автора!!! Попробуйте еще раз..." << endl << "Введите автора : ";
+			cout << "РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ РІРІРѕРґ Р°РІС‚РѕСЂР°!!! РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·..." << endl << "Р’РІРµРґРёС‚Рµ Р°РІС‚РѕСЂР° : ";
 			getline(cin, inputString);
 			checking = true;
 			continue;
@@ -220,7 +220,7 @@ string CBookCard::CorrectInputTitle()
 			if (CheckOnSymbol(inputString) == false)
 			{
 				cin.clear();
-				cout << "Неправильный ввод заглавия!!! Попробуйте еще раз..." << endl << "Введите заглавие : ";
+				cout << "РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ РІРІРѕРґ Р·Р°РіР»Р°РІРёСЏ!!! РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·..." << endl << "Р’РІРµРґРёС‚Рµ Р·Р°РіР»Р°РІРёРµ : ";
 				buffer = "";
 				getline(cin, inputString);
 				checking = true;
@@ -235,7 +235,7 @@ string CBookCard::CorrectInputTitle()
 		if (inputString.empty())
 		{
 			cin.clear();
-			cout << "Неправильный ввод заглавия!!! Попробуйте еще раз..." << endl << "Введите заглавие : ";
+			cout << "РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ РІРІРѕРґ Р·Р°РіР»Р°РІРёСЏ!!! РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·..." << endl << "Р’РІРµРґРёС‚Рµ Р·Р°РіР»Р°РІРёРµ : ";
 			getline(cin, inputString);
 			checking = true;
 			continue;
@@ -259,7 +259,7 @@ string CBookCard::CorrectInputPublisher()
 			if (CheckOnSymbol(inputString) == false)
 			{
 				cin.clear();
-				cout << "Неправильный ввод издателя!!! Попробуйте еще раз..." << endl << "Введите издателя : ";
+				cout << "РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ РІРІРѕРґ РёР·РґР°С‚РµР»СЏ!!! РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·..." << endl << "Р’РІРµРґРёС‚Рµ РёР·РґР°С‚РµР»СЏ : ";
 				buffer = "";
 				getline(cin, inputString);
 				checking = true;
@@ -274,7 +274,7 @@ string CBookCard::CorrectInputPublisher()
 		if (inputString.empty())
 		{
 			cin.clear();
-			cout << "Неправильный ввод издателя!!! Попробуйте еще раз..." << endl << "Введите издеталя : ";
+			cout << "РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ РІРІРѕРґ РёР·РґР°С‚РµР»СЏ!!! РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·..." << endl << "Р’РІРµРґРёС‚Рµ РёР·РґРµС‚Р°Р»СЏ : ";
 			getline(cin, inputString);
 			checking = true;
 			continue;
@@ -299,7 +299,7 @@ string CBookCard::CorrectInputBBK()
 			if (CheckOnSymbol(inputString) == false)
 			{
 				cin.clear();
-				cout << "Неправильный ввод ББК!!! Попробуйте еще раз..." << endl << "Введите ББК : ";
+				cout << "РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ РІРІРѕРґ Р‘Р‘Рљ!!! РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·..." << endl << "Р’РІРµРґРёС‚Рµ Р‘Р‘Рљ : ";
 				buffer = "";
 				getline(cin, inputString);
 				checking = true;
@@ -308,7 +308,7 @@ string CBookCard::CorrectInputBBK()
 			if ((c == ',') || (c == '/') || (c == ';') || (c == ':') || (c == '[') || (c == ']') || (c == '{') || (c == '}') || (c == '(') || (c == ')'))
 			{
 				cin.clear();
-				cout << "Неправильный ввод ББК!!! Попробуйте еще раз..." << endl << "Введите ББК : ";
+				cout << "РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ РІРІРѕРґ Р‘Р‘Рљ!!! РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·..." << endl << "Р’РІРµРґРёС‚Рµ Р‘Р‘Рљ : ";
 				buffer = "";
 				getline(cin, inputString);
 				checking = true;
@@ -323,7 +323,7 @@ string CBookCard::CorrectInputBBK()
 		if (inputString.empty())
 		{
 			cin.clear();
-			cout << "Неправильный ввод ББК!!! Попробуйте еще раз..." << endl << "Введите ББК : ";
+			cout << "РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ РІРІРѕРґ Р‘Р‘Рљ!!! РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·..." << endl << "Р’РІРµРґРёС‚Рµ Р‘Р‘Рљ : ";
 			getline(cin, inputString);
 			checking = true;
 			continue;
@@ -348,7 +348,7 @@ string CBookCard::CorrectInputComment()
 			if (CheckOnSymbol(inputString) == false)
 			{
 				cin.clear();
-				cout << "Неправильный ввод комментария!!! Попробуйте еще раз..." << endl << "Введите комментарий : ";
+				cout << "РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ РІРІРѕРґ РєРѕРјРјРµРЅС‚Р°СЂРёСЏ!!! РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·..." << endl << "Р’РІРµРґРёС‚Рµ РєРѕРјРјРµРЅС‚Р°СЂРёР№ : ";
 				buffer = "";
 				getline(cin, inputString);
 				checking = true;
@@ -363,7 +363,7 @@ string CBookCard::CorrectInputComment()
 		if (inputString.empty())
 		{
 			cin.clear();
-			cout << "Неправильный ввод комментария!!! Попробуйте еще раз..." << endl << "Введите комментарий : ";
+			cout << "РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ РІРІРѕРґ РєРѕРјРјРµРЅС‚Р°СЂРёСЏ!!! РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·..." << endl << "Р’РІРµРґРёС‚Рµ РєРѕРјРјРµРЅС‚Р°СЂРёР№ : ";
 			getline(cin, inputString);
 			checking = true;
 			continue;
@@ -381,7 +381,7 @@ int CBookCard::CorrectInputRate()
 	getline(cin, inputString);
 	while (inputString.empty())
 	{
-		cout << "Некорректный рейтинг. Попробуйте еще раз..." << endl << "Введите рейтинг : ";
+		cout << "РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ СЂРµР№С‚РёРЅРі. РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·..." << endl << "Р’РІРµРґРёС‚Рµ СЂРµР№С‚РёРЅРі : ";
 		getline(cin, inputString);
 	}
 	for (unsigned char c : inputString)
@@ -393,12 +393,12 @@ int CBookCard::CorrectInputRate()
 	}
 	if (buff.empty())
 	{
-		cout << "Некорректный рейтинг. Попробуйте еще раз..." << endl << "Введите рейтинг : ";
+		cout << "РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ СЂРµР№С‚РёРЅРі. РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·..." << endl << "Р’РІРµРґРёС‚Рµ СЂРµР№С‚РёРЅРі : ";
 		rating = CorrectInputRate();
 	}
 	else
 	{
-		rating = atoi(buff.c_str());//Преобразование строки рейтинга в тип int
+		rating = atoi(buff.c_str());//РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ СЃС‚СЂРѕРєРё СЂРµР№С‚РёРЅРіР° РІ С‚РёРї int
 	}
 	return rating;
 }
@@ -406,27 +406,27 @@ int CBookCard::CorrectInputRate()
 void CBookCard::SetNewBook()
 {
 	int i = 0;
-	cout << "Введите автора : ";
+	cout << "Р’РІРµРґРёС‚Рµ Р°РІС‚РѕСЂР° : ";
 	if (i == 0)
 	{
 		cin.ignore();
 	}
 	author = CorrectInputAuthor();
-	cout << "Введите заглавие : ";
+	cout << "Р’РІРµРґРёС‚Рµ Р·Р°РіР»Р°РІРёРµ : ";
 	title = CorrectInputTitle();
-	cout << "Введите издателя : ";
+	cout << "Р’РІРµРґРёС‚Рµ РёР·РґР°С‚РµР»СЏ : ";
 	publisher = CorrectInputPublisher();
-	cout << "Введите год публикации : ";
+	cout << "Р’РІРµРґРёС‚Рµ РіРѕРґ РїСѓР±Р»РёРєР°С†РёРё : ";
 	yearOfPublication = CorrectInputYearOfPublication();
 	while ((yearOfPublication < 1000) ||(yearOfPublication >2023) )
 	{
 		cin.clear();
-		cout << "Некорректный год публикации. Попробуйте еще раз..." << endl << "Введите год публикации : ";
+		cout << "РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РіРѕРґ РїСѓР±Р»РёРєР°С†РёРё. РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·..." << endl << "Р’РІРµРґРёС‚Рµ РіРѕРґ РїСѓР±Р»РёРєР°С†РёРё : ";
 		yearOfPublication = CorrectInputYearOfPublication();
 	}
-	cout << "Введите ББК : ";
+	cout << "Р’РІРµРґРёС‚Рµ Р‘Р‘Рљ : ";
 	bbk = CorrectInputBBK();
-	cout << "Введите рейтинг : ";
+	cout << "Р’РІРµРґРёС‚Рµ СЂРµР№С‚РёРЅРі : ";
 	rate = CorrectInputRate();
 	if (rate < 0)
 		rate = 0;
@@ -435,7 +435,7 @@ void CBookCard::SetNewBook()
 	else
 		this->rate = rate;
 	//cin.ignore();
-	cout << "Введите комментарий : ";
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕРјРјРµРЅС‚Р°СЂРёР№ : ";
 	comment = CorrectInputComment();
 	i++;
 }
