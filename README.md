@@ -22,14 +22,15 @@ C++:
 ---2---
 
 Необходимо реализовать иерархию классов предметной области на языке C++.
+
   Требования и рекомендации:
   1.	Иерархия классов должна состоять не менее чем из 3-х уровней. 
   2.	Каждый класс должен содержать уникальный набор полей. 
   3.	В классах не должно быть открытых полей (должны быть модификаторы доступа private или protected). Для доступа к полям класса необходимо использовать свойства.
   4.	В процессе реализации иерархии классов использовать абстрактные классы.
   5.	Классы рекомендуется оформить в виде библиотеки классов. Проверку функциональности осуществить в консольном проекте.
-  Моё задание:
-  Магазин. Определить иерархию товаров магазина. Создать продовольственный магазин. Определить общую стоимость товаров магазина, стоимость товаров заданной категории.
+Моё задание:
+Магазин. Определить иерархию товаров магазина. Создать продовольственный магазин. Определить общую стоимость товаров магазина, стоимость товаров заданной категории.
 
 Python:
 
@@ -44,14 +45,22 @@ Python:
   5.	поиск элемента по заданному полю;
   6.	вывод всех элементов, удовлетворяющих заданному условию;
   7.	удаление элемента из коллекции.
+     
 Приложение должно содержать меню, диалоговые окна и предусматривать обработку ошибок.
 Описать класс с именем ZNAK, содержащий следующие поля:
+  
   •	фамилия, имя;
+  
   •	знак Зодиака;
+  
   •	дата рождения (массив из трех чисел).
+  
 Написать программу, выполняющую следующие действия:
+
   •	см. общее задание;
+  
   •	ввод с клавиатуры данных (записи должны быть упорядочены по дате рождения);
+  
   •	вывод на экран информации о человеке, чья фамилия введена с клавиатуры (если такого нет, вывести соответствующее сообщение).
 
 English:
@@ -83,8 +92,8 @@ It is necessary to implement a hierarchy of domain classes in C++.
   3. Classes should not have open fields (there should be private or protected access modifiers). To access class fields, you must use properties.
   4. In the process of implementing the hierarchy of classes, use abstract classes.
   5. Classes are recommended to be designed in the form of a class library. Check the functionality in the console project.
-  My assignment:
-  Shop. Define the hierarchy of the store's products. Create a grocery store. Determine the total cost of the store's goods, the cost of goods of a given category.
+My assignment:
+Shop. Define the hierarchy of the store's products. Create a grocery store. Determine the total cost of the store's goods, the cost of goods of a given category.
 
 Python:
 
@@ -99,14 +108,22 @@ Choose the type of collection yourself. Write a Windows application to work with
   5. search for an element by a given field;
   6. output of all elements satisfying the specified condition;
   7. deleting an item from the collection.
+     
 The application must contain menus, dialog boxes and provide error handling.
 Describe a class named ZNAK containing the following fields:
+
   • last name, first name;
+  
   • zodiac sign;
+  
   • date of birth (an array of three numbers).
+  
 Write a program that performs the following actions:
+
   • see the general task;
+  
   • keyboard input of data (entries should be ordered by date of birth);
+  
   • display information about the person whose last name is entered from the keyboard (if there is no such, display the corresponding message).
 
 
