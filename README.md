@@ -29,6 +29,7 @@ C++:
   3.	В классах не должно быть открытых полей (должны быть модификаторы доступа private или protected). Для доступа к полям класса необходимо использовать свойства.
   4.	В процессе реализации иерархии классов использовать абстрактные классы.
   5.	Классы рекомендуется оформить в виде библиотеки классов. Проверку функциональности осуществить в консольном проекте.
+     
 Моё задание:
 Магазин. Определить иерархию товаров магазина. Создать продовольственный магазин. Определить общую стоимость товаров магазина, стоимость товаров заданной категории.
 
@@ -92,6 +93,7 @@ It is necessary to implement a hierarchy of domain classes in C++.
   3. Classes should not have open fields (there should be private or protected access modifiers). To access class fields, you must use properties.
   4. In the process of implementing the hierarchy of classes, use abstract classes.
   5. Classes are recommended to be designed in the form of a class library. Check the functionality in the console project.
+     
 My assignment:
 Shop. Define the hierarchy of the store's products. Create a grocery store. Determine the total cost of the store's goods, the cost of goods of a given category.
 
