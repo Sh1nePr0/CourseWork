@@ -7,13 +7,13 @@ using namespace std;
 class CBookCard 
 {
 public:
-	//Конструкторы и деструктор
+	//РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂС‹ Рё РґРµСЃС‚СЂСѓРєС‚РѕСЂ
 	CBookCard();
 	~CBookCard(){};
 
 	CBookCard(string author , string title , string publisher , int yearOfPublication , string bbk);
 
-	//Объявление геттеров и сетторов для каждого поля
+	//РћР±СЉСЏРІР»РµРЅРёРµ РіРµС‚С‚РµСЂРѕРІ Рё СЃРµС‚С‚РѕСЂРѕРІ РґР»СЏ РєР°Р¶РґРѕРіРѕ РїРѕР»СЏ
 	void SetAuthor(string author);
 	string GetAuthor();
 
@@ -41,13 +41,13 @@ public:
 	void SetComment(string comment);
 	string GetComment();
 
-    //Объявление метода преобразования информации о книги в одну строку
+    //РћР±СЉСЏРІР»РµРЅРёРµ РјРµС‚РѕРґР° РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РєРЅРёРіРё РІ РѕРґРЅСѓ СЃС‚СЂРѕРєСѓ
 	void ToString();
 
-	//Метод задания всей информации о книге
+	//РњРµС‚РѕРґ Р·Р°РґР°РЅРёСЏ РІСЃРµР№ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РєРЅРёРіРµ
 	void SetNewBook();
 
-	//Методы проверки на ввод каждого поля
+	//РњРµС‚РѕРґС‹ РїСЂРѕРІРµСЂРєРё РЅР° РІРІРѕРґ РєР°Р¶РґРѕРіРѕ РїРѕР»СЏ
 	int CorrectInputYearOfPublication();
 	int CorrectInputRate();
 	string CorrectInputAuthor();
@@ -56,16 +56,16 @@ public:
 	string CorrectInputBBK();
 	string CorrectInputComment();
 
-	//Метод проверки на ввод символа
+	//РњРµС‚РѕРґ РїСЂРѕРІРµСЂРєРё РЅР° РІРІРѕРґ СЃРёРјРІРѕР»Р°
 	bool CheckOnSymbol(string str);
 
 private:
-	//Все поля класса
-	string author;//автор
-	string title;//название
-	string publisher;//издатель
-	int yearOfPublication;//год издания
-	string bbk;//ББК
-	int rate;//Рейтинг
-	string comment;//Комментарий
+	//Р’СЃРµ РїРѕР»СЏ РєР»Р°СЃСЃР°
+	string author;//Р°РІС‚РѕСЂ
+	string title;//РЅР°Р·РІР°РЅРёРµ
+	string publisher;//РёР·РґР°С‚РµР»СЊ
+	int yearOfPublication;//РіРѕРґ РёР·РґР°РЅРёСЏ
+	string bbk;//Р‘Р‘Рљ
+	int rate;//Р РµР№С‚РёРЅРі
+	string comment;//РљРѕРјРјРµРЅС‚Р°СЂРёР№
 };
